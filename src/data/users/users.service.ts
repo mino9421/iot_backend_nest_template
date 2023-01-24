@@ -18,17 +18,22 @@ export class UsersService {
         return this.usersRepository.find({});
     }
 
-    
     async createUser(email: string, age: number): Promise<User> {
         return this.usersRepository.create({
             userId: uuidv4(),
             email,
             age,
-            favoriteFoods: []
+            // I can use the rest for sample data
+            favoriteFoods: [],
         })
     }
 
     async updateUser(userId: string, userUpdates: UpdateUserDto): Promise<User> {
         return this.usersRepository.findOneAndUpdate({ userId }, userUpdates);
     }
+
+    async deleteUser(userId: string): Promise<User> {
+        return this.usersRepository.findOneAndDelete({ userId });
+    }
+
 }
