@@ -1,6 +1,14 @@
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository
+Features Implemented:
+1. SQLite - database
+2. SWAGGER - API Testing
+3. CRUD Functionality - As a sample
+
+Future Features Implemented:
+1. GraphQL
+2. Testing with sandbox
 
 ## Installation
 
